@@ -17,13 +17,15 @@ int main(){
     x = insere_arvBin(raiz, 160);
 
 
+
+
     if(vazia_arvBin(raiz)){
         printf("A arvore esta vazia.");
     }else{
         printf("A arvore possui elementos.");
     }
     printf("\n");
-    liberar_arvBin(raiz);
+
 
     x = altura_arvBin(raiz);
     printf("A altura da Arvore: %d\n", x);
@@ -37,6 +39,8 @@ int main(){
     printf("\nVisitando em-Ordem:\n");
     emOrdem_arvBin(raiz);
 
+
+    remove_arvBin(raiz, 100);
     x = remove_arvBin(raiz, 100);
     printf("\nVisitando pos-Ordem depois da remocao:\n");
     posOrdem_arvBin(raiz);
@@ -50,8 +54,10 @@ int main(){
 
     printf("\nBusca na Arvore Binaria:\n");
     if(consulta_arvBin(raiz, 140)){
-        printf("\nConsulta realizada com sucesso!");
+        printf("\nConsulta realizada com sucesso!\n\n");
     }else{
-        printf("\nElemento não encontrado...");
+        printf("\nElemento não encontrado...\n\n");
     }
+
+    liberar_arvBin(raiz);
 }

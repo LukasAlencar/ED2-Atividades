@@ -9,31 +9,12 @@ struct NO{
 };
 
 ArvBin *cria_arvBin(){
-    ArvBin *raiz = (ArvBin*) malloc(sizeof(ArvBin));
+    ArvBin *raiz =(ArvBin*) malloc(sizeof(ArvBin));
     if(raiz != NULL){
         *raiz = NULL;
     }
     return raiz;
 }
-
-void liberar_arvBin(ArvBin *raiz){
-    if(raiz == NULL){
-        return;
-    }
-    libera_NO(*raiz);
-    free(raiz);
-}
-
-void libera_NO(struct NO *no){
-    if(no == NULL){
-        return;
-    }
-    libera_NO(no->esq);
-    libera_NO(no->dir);
-    free(no);
-    no = NULL;
-}
-
 
 int vazia_arvBin(ArvBin *raiz){
     if(raiz == NULL){
@@ -80,7 +61,7 @@ void preOrdem_arvBin(ArvBin *raiz){
         return;
     }
     if(*raiz != NULL){
-        printf("%d\n", (*raiz)->info);
+        printf("%d \n", (*raiz)->info);
         preOrdem_arvBin(&((*raiz)->esq));
         preOrdem_arvBin(&((*raiz)->dir));
 
@@ -91,10 +72,10 @@ void emOrdem_arvBin(ArvBin *raiz){
     if(raiz == NULL){
         return;
     }
-    if(raiz != NULL){
+    if(*raiz != NULL){
         emOrdem_arvBin(&((*raiz)->esq));
         printf("%d\n", (*raiz) -> info);
-        emOrdem_arvBin(&((*raiz)->esq));
+        emOrdem_arvBin(&((*raiz)->dir));
     }
 }
 
@@ -198,6 +179,8 @@ int remove_arvBin(ArvBin *raiz, int valor){
     }
 }
 
+
+
 int consulta_arvBin(ArvBin *raiz, int valor){
     if(raiz == NULL){
         return 0;
@@ -214,4 +197,22 @@ int consulta_arvBin(ArvBin *raiz, int valor){
         }
     }
     return 0;
+}
+
+void liberar_arvBin(ArvBin *raiz){
+    if(raiz == NULL){
+        return;
+    }
+    libera_NO(*raiz);
+    free(raiz);
+}
+
+void libera_NO(struct NO *no){
+    if(no == NULL){
+        return;
+    }
+    libera_NO(no->esq);
+    libera_NO(no->dir);
+    free(no);
+    no = NULL;
 }

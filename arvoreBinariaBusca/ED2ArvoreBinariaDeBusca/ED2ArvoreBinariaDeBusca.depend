@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1663629081 source:/home/aluno/Documentos/GU3025829/ED2-Atividades/arvoreBinariaBusca/arvoreBinaria.c
+	<stdio.h>
+	<stdlib.h>
+	"arvoreBinaria.h"
+
+1663627665 /home/aluno/Documentos/GU3025829/ED2-Atividades/arvoreBinariaBusca/arvoreBinaria.h
+
+1663628948 source:/home/aluno/Documentos/GU3025829/ED2-Atividades/arvoreBinariaBusca/main.c
+	<stdio.h>
+	<stdlib.h>
+	"arvoreBinaria.h"
+

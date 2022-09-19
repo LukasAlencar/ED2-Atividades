@@ -1,3 +1,6 @@
+#ifndef ARVOREBINARIA_H
+#define ARVOREBINARIA_H
+
 typedef struct NO *ArvBin;
 
 ArvBin *cria_arvBin();
@@ -21,3 +24,5 @@ int insere_arvBin(ArvBin *raiz, int valor);
 int remove_arvBin(ArvBin *raiz, int valor);
 
 int consulta_arvBin(ArvBin *raiz, int valor);
+
+#endif

@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1665615165 source:c:\users\hacke\documents\github\clones\ed2-atividades\arvbincerta1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"arvoreBinaria.h"
+
+1665454333 c:\users\hacke\documents\github\clones\ed2-atividades\arvbincerta1\arvorebinaria.h
+

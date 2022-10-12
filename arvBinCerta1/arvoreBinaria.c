@@ -8,15 +8,15 @@ struct NO{
     struct NO *dir;
 };
 
-ArvBin *cria_arvBin(){
-    ArvBin *raiz =(ArvBin*) malloc(sizeof(ArvBin));
+arvBinaria *cria_arvBinaria(){
+    arvBinaria *raiz =(arvBinaria*) malloc(sizeof(arvBinaria));
     if(raiz != NULL){
         *raiz = NULL;
     }
     return raiz;
 }
 
-int vazia_arvBin(ArvBin *raiz){
+int vazia_arvBinaria(arvBinaria *raiz){
     if(raiz == NULL){
         return 1;
     }
@@ -26,15 +26,15 @@ int vazia_arvBin(ArvBin *raiz){
     return 0;
 }
 
-int altura_arvBin(ArvBin *raiz){
+int altura_arvBinaria(arvBinaria *raiz){
     if(raiz == NULL){
         return 0;
     }
     if(*raiz == NULL){
         return 0;
     }
-    int alt_esq = altura_arvBin(&((*raiz)->esq));
-    int alt_dir = altura_arvBin(&((*raiz)->dir));
+    int alt_esq = altura_arvBinaria(&((*raiz)->esq));
+    int alt_dir = altura_arvBinaria(&((*raiz)->dir));
 
     if(alt_esq > alt_dir){
         return(alt_esq + 1);
@@ -43,7 +43,7 @@ int altura_arvBin(ArvBin *raiz){
     }
 }
 
-int totalNO_arvBin(ArvBin *raiz){
+int totalNO_arvBinaria(arvBinaria *raiz){
     if(raiz == NULL){
         return 0;
     }
@@ -51,46 +51,46 @@ int totalNO_arvBin(ArvBin *raiz){
         return 0;
     }
 
-    int alt_esq = totalNO_arvBin(&((*raiz)->esq));
-    int alt_dir = totalNO_arvBin(&((*raiz)->dir));
+    int alt_esq = totalNO_arvBinaria(&((*raiz)->esq));
+    int alt_dir = totalNO_arvBinaria(&((*raiz)->dir));
     return(alt_esq + alt_dir + 1);
 }
 
-void preOrdem_arvBin(ArvBin *raiz){
+void preOrdem_arvBinaria(arvBinaria *raiz){
     if(raiz == NULL){
         return;
     }
     if(*raiz != NULL){
         printf("%d \n", (*raiz)->info);
-        preOrdem_arvBin(&((*raiz)->esq));
-        preOrdem_arvBin(&((*raiz)->dir));
+        preOrdem_arvBinaria(&((*raiz)->esq));
+        preOrdem_arvBinaria(&((*raiz)->dir));
 
     }
 }
 
-void emOrdem_arvBin(ArvBin *raiz){
+void emOrdem_arvBinaria(arvBinaria *raiz){
     if(raiz == NULL){
         return;
     }
     if(*raiz != NULL){
-        emOrdem_arvBin(&((*raiz)->esq));
+        emOrdem_arvBinaria(&((*raiz)->esq));
         printf("%d\n", (*raiz) -> info);
-        emOrdem_arvBin(&((*raiz)->dir));
+        emOrdem_arvBinaria(&((*raiz)->dir));
     }
 }
 
-void posOrdem_arvBin(ArvBin *raiz){
+void posOrdem_arvBinaria(arvBinaria *raiz){
     if(raiz == NULL){
         return;
     }
     if(*raiz != NULL){
-        posOrdem_arvBin(&((*raiz)->esq));
-        posOrdem_arvBin(&((*raiz)->dir));
+        posOrdem_arvBinaria(&((*raiz)->esq));
+        posOrdem_arvBinaria(&((*raiz)->dir));
         printf("%d\n", (*raiz)-> info);
     }
 }
 
-int insere_arvBin(ArvBin *raiz, int valor){
+int insere_arvBinaria(arvBinaria *raiz, int valor){
     if(raiz == NULL){
         return 0;
     }
@@ -151,7 +151,7 @@ struct NO *remove_atual(struct NO *atual){
         return no2;
 }
 
-int remove_arvBin(ArvBin *raiz, int valor){
+int remove_arvBinaria(arvBinaria *raiz, int valor){
     if(raiz == NULL){
         return 0;
     }
@@ -181,7 +181,7 @@ int remove_arvBin(ArvBin *raiz, int valor){
 
 
 
-int consulta_arvBin(ArvBin *raiz, int valor){
+int consulta_arvBinaria(arvBinaria *raiz, int valor){
     if(raiz == NULL){
         return 0;
     }
@@ -199,7 +199,7 @@ int consulta_arvBin(ArvBin *raiz, int valor){
     return 0;
 }
 
-void liberar_arvBin(ArvBin *raiz){
+void liberar_arvBinaria(arvBinaria *raiz){
     if(raiz == NULL){
         return;
     }

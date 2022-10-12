@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1665612226 source:c:\users\hacke\documents\github\clones\ed2-atividades\arvorebinarialucaskauan\arvorebinaria.c
+	<stdio.h>
+	<stdlib.h>
+	"arvoreBinaria.h"
+
+1665612210 c:\users\hacke\documents\github\clones\ed2-atividades\arvorebinarialucaskauan\arvorebinaria.h
+
+1665614953 source:c:\users\hacke\documents\github\clones\ed2-atividades\arvorebinarialucaskauan\main.c
+	<stdio.h>
+	<stdlib.h>
+	"arvoreAVL.h"
+
+1665614673 source:c:\users\hacke\documents\github\clones\ed2-atividades\arvorebinarialucaskauan\arvoreavl.c
+	<stdio.h>
+	<stdlib.h>
+	"arvoreBinaria.h"
+
+1665612210 c:\users\hacke\documents\github\clones\ed2-atividades\arvorebinarialucaskauan\arvoreavl.h
+
+1665615014 source:c:\users\hacke\documents\github\clones\ed2-atividades\arvoreavllucaskauan\arvoreavl.c
+	<stdio.h>
+	<stdlib.h>
+	"arvoreAVL.h"
+
+1665612210 c:\users\hacke\documents\github\clones\ed2-atividades\arvoreavllucaskauan\arvoreavl.h
+
+1665614953 source:c:\users\hacke\documents\github\clones\ed2-atividades\arvoreavllucaskauan\main.c
+	<stdio.h>
+	<stdlib.h>
+	"arvoreAVL.h"
+
